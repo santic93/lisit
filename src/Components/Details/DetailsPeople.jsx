@@ -50,22 +50,5 @@ export default function DetailsPeople() {
         </>
       )}
     </div>
-    // <div>
-    //   {person && (
-    //     <div>
-    //       <p>Nombre: {person.name}</p>
-    //       <p>Género: {person.gender}</p>
-    //       <p>Año de nacimiento: {person.birth_year}</p>
-    //       {/* Otros detalles */}
-    //     </div>
-    //   )}
-    //   <div className='descripcion'>
-    //     {/* <img src={.Poster} alt='' />
-    //     <h2>Titulo: {.Title}</h2>
-    //     <p>Actores: {.Actors}</p>
-    //     <span>Año: {.Year}</span>
-    //     <span>Duracion: {.Runtime}</span> */}
-    //   </div>
-    // </div>
   );
 }

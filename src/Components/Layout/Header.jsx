@@ -27,7 +27,6 @@ export default function Header() {
       setShowAlertModal(true); // Mostrar el modal de alerta
       return;
     } else {
-      console.log('Realizar búsqueda con el término:', inputTerm);
       setIsLoading(true);
       await searchTerm(location.pathname, inputTerm);
       setIsLoading(false);

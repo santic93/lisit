@@ -13,7 +13,7 @@ export default function Ships() {
     };
     list();
   }, [currentPage]);
-  console.log(search);
+ 
   const totalPages = Math.ceil(search?.count / search?.results?.length);
   return (
     <div className='ships'>

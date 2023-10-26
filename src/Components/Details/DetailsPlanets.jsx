@@ -8,7 +8,7 @@ export default function DetailsPlanets() {
   const { id } = useParams();
   const { detailsPlanets, detailPlanet } = useContext(Context);
   const [isLoading, setIsLoading] = useState(false);
-  console.log(detailPlanet);
+ 
   useEffect(() => {
     const detail = async () => {
       setIsLoading(true);

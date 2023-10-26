@@ -8,7 +8,7 @@ export default function DetailsShips() {
   const { id } = useParams();
   const { detailsVehicles, detailVehicle } = useContext(Context);
   const [isLoading, setIsLoading] = useState(false);
-  console.log(detailVehicle);
+
   useEffect(() => {
     const detail = async () => {
       setIsLoading(true);

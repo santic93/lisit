@@ -6,20 +6,18 @@ export default function Planets() {
   const { isLoading, searchTerm, search, setIsLoading } =
     useContext(Context);
   const [currentPage, setCurrentPage] = useState(1);
-  // const [isLoading, setIsLoading] = useState(false);
+
   useEffect(() => {
     const list = async () => {
       setIsLoading(true);
       await searchTerm('/planets', null, currentPage);
       setIsLoading(false);
-      // setIsLoading(true);
-      // await listPlanets(currentPage);
-      // setIsLoading(false);
+
     };
     list();
   }, [currentPage]);
   const totalPages = Math.ceil(search?.count / search?.results?.length);
-  console.log(search);
+
   return (
     <div className='planets'>
       {' '}

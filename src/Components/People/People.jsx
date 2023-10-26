@@ -1,9 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import Context from '../Context/Context';
 import './People.css';
-import { Link, useNavigate } from 'react-router-dom';
-export default function People() {
-  const navigate = useNavigate();
+import { Link } from 'react-router-dom';
+export default function People(){
   const { setIsLoading, isLoading, searchTerm, search } = useContext(Context);
   const [currentPage, setCurrentPage] = useState(1);
 
@@ -12,9 +11,6 @@ export default function People() {
       setIsLoading(true);
       await searchTerm('/people', null, currentPage);
       setIsLoading(false);
-      // setIsLoading(true);
-      // await listPeople(currentPage);
-      // setIsLoading(false);
     };
     list();
   }, [currentPage]);
