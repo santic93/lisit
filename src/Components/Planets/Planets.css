@@ -1,0 +1,19 @@
+.planets {
+  min-height: 100vh;
+  background-image: url('./planets.avif');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.planetsHover:hover {
+  background-color: antiquewhite !important;
+}
+.planetsText:hover {
+  color: black !important;
+  font-weight: bold;
+}
+.btnPlanets:hover {
+  background-color: blueviolet;
+  color: black;
+  font-weight: bold;
+}

@@ -1,0 +1,19 @@
+.ships{
+  min-height: 100vh;
+  background-image: url('./ships.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.shipsHover:hover {
+  background-color: antiquewhite !important;
+}
+.shipsText:hover {
+  color: black !important;
+  font-weight: bold;
+}
+.btnShips:hover {
+  background-color: blueviolet;
+  color: black;
+  font-weight: bold;
+}

@@ -1,0 +1,19 @@
+.people {
+  min-height: 100vh;
+  background-image: url('./people.webp');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.personasHover:hover {
+  background-color: antiquewhite !important;
+}
+.personasText:hover {
+  color: black !important;
+  font-weight: bold;
+}
+.btnPeople:hover {
+  background-color: blueviolet;
+  color: black;
+  font-weight: bold;
+}

@@ -1,0 +1,43 @@
+.descripcion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80vh;
+  border-color: black;
+  border-width: 25px;
+  border-style: dashed;
+  animation: titilar 2s infinite;
+}
+@keyframes titilar {
+  0% {
+    border-color: black;
+  }
+  50% {
+    border-color: red; /* Cambia el color a medida que titila */
+  }
+  100% {
+    border-color: black;
+  }
+}
+h2 {
+  background-color: blanchedalmond;
+  padding: 5px;
+  border-radius: 15px;
+  text-shadow: 6px 6px 10px gray;
+}
+img {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+img:hover {
+  box-shadow: 3px 3px 6px white;
+  transform: scale(1.1);
+  border-radius: 15px;
+}
+.atrasDetails:hover {
+  background-color: black;
+  color: brown;
+  font-weight: bold;
+}
