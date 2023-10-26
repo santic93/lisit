@@ -10,6 +10,7 @@ import DetailsPlanets from './Components/Details/DetailsPlanets';
 import DetailsShips from './Components/Details/DetailsShips';
 import DetailsPeople from './Components/Details/DetailsPeople';
 
+
 function App() {
   return (
     <div className='App'>

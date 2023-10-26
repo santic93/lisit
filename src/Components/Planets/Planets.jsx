@@ -2,9 +2,9 @@ import React, { useContext, useEffect, useState } from 'react';
 import Context from '../Context/Context';
 import { Link } from 'react-router-dom';
 import './Planets.css';
+import ResidentInfo from './ResidentInfo';
 export default function Planets() {
-  const { isLoading, searchTerm, search, setIsLoading } =
-    useContext(Context);
+  const { isLoading, searchTerm, search, setIsLoading } = useContext(Context);
   const [currentPage, setCurrentPage] = useState(1);
 
   useEffect(() => {
@@ -12,12 +12,11 @@ export default function Planets() {
       setIsLoading(true);
       await searchTerm('/planets', null, currentPage);
       setIsLoading(false);
-
     };
     list();
   }, [currentPage]);
   const totalPages = Math.ceil(search?.count / search?.results?.length);
-
+  console.log(search);
   return (
     <div className='planets'>
       {' '}
@@ -61,6 +60,18 @@ export default function Planets() {
                       <p className='text-capitalize fs-3 card-text text-warning fst-italic planetsText'>
                         Clima: {planet.climate} Terreno: {planet.terrain}
                       </p>
+                      <select
+                        class='form-select'
+                        aria-label='Default select example'
+                      >
+                        <option selected className="text-center">Residentes de {planet.name}</option>
+                        {planet.residents.map((residentUrl) => (
+                          <option className="text-center text-uppercase fw-bold">
+                            <ResidentInfo key={residentUrl} url={residentUrl} />
+                          </option>
+                        ))}
+                      </select>
+                      <br />
                       <Link
                         to={`/planets/${index + 1}`}
                         className='btn btn-primary btnPlanets'
