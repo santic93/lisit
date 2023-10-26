@@ -27,7 +27,7 @@ export default function DetailsShips() {
         <>
           <h2 className='fst-italic'>Nombre: {detailVehicle.name}</h2>
           <h3 className='fw-bolder'>  Modelo: {detailVehicle.model}</h3>
-          <hr class="border border-primary border-3 opacity-75"/>
+          <hr className="border border-primary border-3 opacity-75"/>
           <p>Consumibles: {detailVehicle.consumables}</p>
           <p className='text-uppercase'>Costo en Creditos: {detailVehicle.cost_in_credits}</p>
           <span className='text-uppercase'>
@@ -40,7 +40,7 @@ export default function DetailsShips() {
            Pasajeros: {detailVehicle.passengers}
           </span>
           <span className='text-uppercase'>Clase: {detailVehicle.vehicle_class}</span>
-          <div class='d-grid gap-2 col-6 mx-auto'>
+          <div className='d-grid gap-2 col-6 mx-auto'>
             <button
               onClick={() => navigate(-1)}
               className='btn btn-primary atrasDetails'
