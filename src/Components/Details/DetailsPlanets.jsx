@@ -9,7 +9,6 @@ export default function DetailsPlanets() {
   const { id } = useParams();
   const { detailsPlanets, detailPlanet } = useContext(Context);
   const [isLoading, setIsLoading] = useState(false);
-  console.log(detailPlanet);
   useEffect(() => {
     const detail = async () => {
       setIsLoading(true);
@@ -30,8 +29,12 @@ export default function DetailsPlanets() {
             Nombre: {detailPlanet.name}
           </h2>
           <h2>Residentes del planeta:</h2>
-          <select class='form-select' aria-label='Default select example'>
-            {detailPlanet.residents.map((residentUrl) => (
+          <select
+            className='form-select'
+            multiple
+            aria-label='Multiple select example'
+          >
+            {detailPlanet.residents?.map((residentUrl) => (
               <option className='text-center text-uppercase fw-bold'>
                 <ResidentInfo key={residentUrl} url={residentUrl} />
               </option>

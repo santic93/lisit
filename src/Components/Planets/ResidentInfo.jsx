@@ -13,7 +13,7 @@ const ResidentInfo = ({ url }) => {
 
   return (
     <li className='dropdown'>
-      <strong>Nombre: </strong>{' '}
+      <strong >Nombre: </strong>{' '}
       {residentData.name ? residentData.name : ' Cargando...'}{' '}
       <ul>
         <li>
