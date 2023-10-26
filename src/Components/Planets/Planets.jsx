@@ -64,9 +64,11 @@ export default function Planets() {
                         class='form-select'
                         aria-label='Default select example'
                       >
-                        <option selected className="text-center">Residentes de {planet.name}</option>
+                        <option selected className='text-center'>
+                          Residentes de {planet.name}
+                        </option>
                         {planet.residents.map((residentUrl) => (
-                          <option className="text-center text-uppercase fw-bold">
+                          <option className='text-center text-uppercase fw-bold'>
                             <ResidentInfo key={residentUrl} url={residentUrl} />
                           </option>
                         ))}
@@ -76,7 +78,8 @@ export default function Planets() {
                         to={`/planets/${index + 1}`}
                         className='btn btn-primary btnPlanets'
                       >
-                        Mas Informacion
+                        Mas Informacion de{' '}
+                        <span className='fw-bold'>{planet.name}</span>
                       </Link>
                     </div>
                   </div>

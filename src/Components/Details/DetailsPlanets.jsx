@@ -2,13 +2,14 @@ import React, { useContext, useEffect, useState } from 'react';
 import './Details.css';
 import { useNavigate, useParams } from 'react-router-dom';
 import Context from '../Context/Context';
+import ResidentInfo from '../Planets/ResidentInfo';
 
 export default function DetailsPlanets() {
   const navigate = useNavigate();
   const { id } = useParams();
   const { detailsPlanets, detailPlanet } = useContext(Context);
   const [isLoading, setIsLoading] = useState(false);
- 
+  console.log(detailPlanet);
   useEffect(() => {
     const detail = async () => {
       setIsLoading(true);
@@ -25,16 +26,20 @@ export default function DetailsPlanets() {
         </span>
       ) : (
         <>
-          <h2 className='fw-bold text-uppercase'>Nombre: {detailPlanet.name}</h2>
-          <h3>Clima: {detailPlanet.climate}</h3>
-          <hr class="border border-primary border-3 opacity-75"/>
+          <h2 className='fw-bold text-uppercase'>
+            Nombre: {detailPlanet.name}
+          </h2>
+          <h2>Residentes del planeta:</h2>
+          <select class='form-select' aria-label='Default select example'>
+            {detailPlanet.residents.map((residentUrl) => (
+              <option className='text-center text-uppercase fw-bold'>
+                <ResidentInfo key={residentUrl} url={residentUrl} />
+              </option>
+            ))}
+          </select>
+
+          <span>Clima: {detailPlanet.climate}</span>
           <p className='text-uppercase'>Diametro: {detailPlanet.diameter}</p>
-          <span className='text-uppercase'>
-            Gravedad: {detailPlanet.gravity}
-          </span>
-          <span className='text-uppercase'>
-            Periodo Orbital: {detailPlanet.orbital_period}
-          </span>
           <span className='text-uppercase'>
             Poblacion: {detailPlanet.population}
           </span>

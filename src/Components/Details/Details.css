@@ -7,9 +7,12 @@
   flex-wrap: wrap;
   height: 80vh;
   border-color: black;
-  border-width: 25px;
+  border-width: 7px;
   border-style: dashed;
   animation: titilar 2s infinite;
+}
+ul>li{
+  list-style: none;
 }
 @keyframes titilar {
   0% {
